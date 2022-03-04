@@ -9,7 +9,7 @@ A reproduction of issues with graphql-code-generator. There are 2 issues I wante
 
 ## The schema
 
-```
+```graphql
 interface Node {
   id: ID!
 }
@@ -21,7 +21,7 @@ interface ChildInterface implements Node {
 
 ## Expected generated output
 
-```
+```graphql
 export type Scalars = {
   ID: string;
   String: string;
@@ -41,7 +41,7 @@ export type ChildInterface = Node & {
 
 ## Actual generated output
 
-```
+```graphql
 export type Scalars = {
   ID: string;
   String: string;
@@ -63,7 +63,7 @@ export type ChildInterface = {
 
 ## The schema
 
-```
+```graphql
 interface Node @abstractEntity(discriminatorField: "type") {
   id: ID! @id
 }
@@ -81,7 +81,7 @@ type ExampleObject implements ChildInterface @entity {
 
 ## Expected generated output
 
-```
+```graphql
 import { ObjectId } from "mongodb";
 
 export type NodeDbInterface = {
@@ -102,7 +102,7 @@ export type ExampleObjectDbObject = ChildInterfaceDbInterface & {
 
 ## Actual generated output
 
-```
+```graphql
 import { ObjectId } from "mongodb";
 
 export type NodeDbInterface = {
