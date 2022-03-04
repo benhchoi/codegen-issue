@@ -1,6 +1,6 @@
 # Summary
 
-A reproduction of issues with graphql-code-generator. Check annotations made in the files under the "generated" folder to see the errors I'm referencing. There are 2 issues I wanted to point out:
+A reproduction of issues with graphql-code-generator. There are 2 issues I wanted to point out:
 
 1. A child interface that implements a parent interface does not actually do so with code generated under the "typescript" plugin even though the feature is now supported under the GraphQL spec and graphql-js as of v15.0.0.
 2. The "typescript-mongodb" plugin does not properly reference a DbInterface for a field that specifies an interface as its type instead of an object.
