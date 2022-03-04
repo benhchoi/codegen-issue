@@ -1,0 +1,13 @@
+interface Node @abstractEntity(discriminatorField: "type") {
+  id: ID! @id
+}
+
+interface ChildInterface implements Node
+  @abstractEntity(discriminatorField: "childType") {
+  example1: String! @column
+}
+
+type ExampleObject implements ChildInterface @entity {
+  example2: Node! @link
+  example3: ChildInterface! @link
+}

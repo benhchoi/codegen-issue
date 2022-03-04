@@ -1,0 +1,15 @@
+{
+  "schema": "schema.graphql",
+  "extensions": {
+    "codegen": {
+      "generates": {
+        "./generated/typescript-types.ts": {
+          "plugins": ["typescript"]
+        },
+        "./generated/mongodb-types.ts": {
+          "plugins": ["typescript", "typescript-mongodb"]
+        }
+      }
+    }
+  }
+}

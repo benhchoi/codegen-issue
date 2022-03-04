@@ -1,0 +1,26 @@
+{
+  "name": "codegen-issue",
+  "version": "1.0.0",
+  "description": "A reproduction of issues with graphql-code-generator",
+  "scripts": {
+    "generate": "graphql-codegen"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gh:benhchoi/codegen-issue.git"
+  },
+  "author": "Benjamin Choi",
+  "license": "MIT",
+  "devDependencies": {
+    "@graphql-codegen/cli": "2.6.2",
+    "@graphql-codegen/typescript": "2.4.5",
+    "graphql-config": "4.1.0",
+    "ts-node": "10.6.0",
+    "typescript": "4.6.2"
+  },
+  "dependencies": {
+    "@graphql-codegen/typescript-mongodb": "2.3.3",
+    "graphql": "15.8.0",
+    "mongodb": "4.4.1"
+  }
+}
